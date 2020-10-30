@@ -1,0 +1,69 @@
+//    public IntjectBind() {
+//        System.out.println(" bingStatic");
+//        System.out.println(" IntjectBind.mStaticvariableElements"+Connent.mStaticvariableElements.size());
+//        for (VariableElement variableElement : Connent.mStaticvariableElements) {
+//            System.out.println(" in in  in  in  in  in ");
+//            bindStatic(Connent.page,
+//                    variableElement.getEnclosingElement().getSimpleName().toString(),
+//                    variableElement.asType().toString());
+//        }
+//    }
+//    public static void staticBind(List<VariableElement> mStaticvariableElement, String pages) {
+//        System.out.println("mStaticvariableElement"+mStaticvariableElement.size()+"mStaticvariableElement size");
+//        Connent.mStaticvariableElements = mStaticvariableElement;
+//        Connent. page = pages;
+//    }
+
+    public static void bindStatic(String className, String fileName, String fileType) {
+        System.out.println("in2 in2 in2 in2");
+        try {
+            Class aClass = Class.forName(className + ".IntjectStaticBind");
+            System.out.println("in3 in3 in3 in3");
+            Method field = aClass.getMethod("bindStatic", String.class, String.class, String.class);
+            System.out.println("我瞅瞅啊login in inii nin in ");
+            field.invoke(null, className, fileName, fileType);
+//            field.set(null, Class.forName(fileType).newInstance());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
+  try {
+//            JavaFile.builder(elementUtils.getPackageOf(typeElement).getQualifiedName().toString(), new StaticIntjectBind().generateJavaCodeByPoet()).build().writeTo(filer);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+//       IntjectBind.staticBind(mStaticvariableElements,elementUtils.getPackageOf(typeElement).getQualifiedName().toString());
+//        createStaticIntjectBind();
+
+//    private void getObject(VariableElement variableElement) {
+//        String variableName = variableElement.getSimpleName().toString();
+//        String type = variableElement.asType().toString();
+//        methodStaticBuilder.addCode("  if (!myField.getModifiers().contains(Modifier.PUBLIC)) {  ");
+//        methodStaticBuilder.addCode(" myField.setAccessible(true); ");
+//        methodStaticBuilder.addCode(" myField.set(null, new meType ());");
+//        methodStaticBuilder.addCode("}");
+//        methodStaticBuilder.addCode("else{");
+//        methodStaticBuilder.addCode("return new meType ());");
+//        methodStaticBuilder.addCode("}");
+//        get(variableName, type);
+////        if (!variableElement.getModifiers().contains(Modifier.PUBLIC)) {
+////            addPrivates = true;
+////            get(variableName, type);
+////        } else {
+////            methodStaticBuilder.addCode(variableElement.getEnclosingElement().toString() + "." + variableName + " =" + "new " + type + "();");
+////        }
+//    }
+
+//    void get(String variableName, String type) {
+////        privates += "\n" + "java.lang.reflect.Field " + variableName + "=host.getClass().getDeclaredField(" + "\"" + variableName + "\"" + ");";
+//        privates += "\n" + variableName + ".setAccessible(true);";
+//        privates += "\n" + variableName + ".set(null, " + "new " + type + "()" + ");";
+////        privates += "\n" + "bindIn(" + variableName + ");";
+//    }
