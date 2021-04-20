@@ -1,9 +1,13 @@
 # Inject
 # 介绍
-//使用方法如下  
+//使用方法如下     
 
-  
-   public class MainActivity extends AppCompatActivity {
+
+
+
+
+
+ public class MainActivity extends AppCompatActivity {
     @Inject()
     public Z z1;
     @Inject()
