@@ -2,11 +2,7 @@
 # 介绍
 //使用方法如下     
 
-
-
-
-
-
+` ``
  public class MainActivity extends AppCompatActivity {
     @Inject()
     public Z z1;
